@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>*|MC:SUBJECT|*</title>
+	<meta property="og:title" content="*|MC:SUBJECT|*" />
+	<style type="text/css">
+		/* Based on The MailChimp Reset INLINE: Yes. */  
+		/* Client-specific Styles */
+		#outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+		body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;} 
+		/* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
+		.ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */  
+		.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+		/* Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */ 
+		#backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+		/* End reset */
+
+		/* Some sensible defaults for images
+		Bring inline: Yes. */
+		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;} 
+		a img {border:none;} 
+		.image_fix {display:block;}
+
+		/* Yahoo paragraph fix
+		Bring inline: Yes. */
+		p {margin: 1em 0;}
+
+
+		h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+		color: red !important; /* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
+		}
+
+		h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+		color: purple !important; /* Preferably not the same color as the normal header link color. There is limited support for psuedo classes in email clients, this was added just for good measure. */
+		}
+
+		/* Outlook 07, 10 Padding issue fix
+		Bring inline: No.*/
+		table td {border-collapse: collapse;}
+
+		/* Remove spacing around Outlook 07, 10 tables
+		Bring inline: Yes */
+		table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+		
+		/* Template Styles */
+
+	/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: COMMON PAGE ELEMENTS /\/\/\/\/\/\/\/\/\/\ */
+	
+	#backgroundTable {font-family:Arial; color:#757374;}
+	#backgroundTable a {color:#444444 !important;}
+	#backgroundTable .footer {font-family:Arial; color:#FFFFFF !important;}
+	#backgroundTable .footer a {color:#FFFFFF !important;}
+
+	/**
+	* @tab PSNC Typography
+	* @section Heading 1
+	* @tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
+	* @style heading 1
+	*/
+	h1, .h1{
+		/*@editable*/ color:#4f338a;
+		display:block;
+		text-transform: uppercase;
+		/*@editable*/ font-family:Arial;
+		/*@editable*/ font-size:16px;
+		/*@editable*/ font-weight:bold;
+		/*@editable*/ line-height:100%;
+		margin-top:0;
+		margin-right:0;
+		margin-bottom:10px;
+		margin-left:0;
+		/*@editable*/ text-align:left;
+	}
+	
+	.section1 h1 {/*@editable*/ color: #523188; }
+	.section2 h1 {/*@editable*/ color: #649132; }
+	.section3 h1 {/*@editable*/ color: #d68921; }
+
+	/**
+	* @tab PSNC Typography
+	* @section H1 link
+	* @tip Set the styling for all first-level heading links in your emails.
+	*/
+	h1 a:link, h1 a:visited, h1 a .yshortcuts, .h1 a:link, .h1 a:visited, .h1 a .yshortcuts {
+		/*@editable*/ color:#444444 !important;
+		/*@editable*/ font-weight:bold;
+		/*@editable*/ text-decoration:none !important;
+	}
+	
+	.section1 h1 a {/*@editable*/ color: #523188 !important; }
+	.section2 h1 a {/*@editable*/ color: #649132 !important; }
+	.section3 h1 a {/*@editable*/ color: #d68921 !important; }
+
+	/**
+	* @tab PSNC Typography
+	* @section Heading 2
+	* @tip Set the styling for all second-level headings in your emails.
+	* @style heading 2
+	*/
+	h2, .h2{
+		/*@editable*/ color:#65912f;
+		display:block;
+		/*@editable*/ font-family:Arial;
+		/*@editable*/ font-size:15px;
+		/*@editable*/ font-weight:bold;
+		/*@editable*/ line-height:100%;
+		margin-top:0;
+		margin-right:0;
+		margin-bottom:10px;
+		margin-left:0;
+		/*@editable*/ text-align:left;
+	}
+	
+	.section1 h2 {/*@editable*/ color: #523188; }
+	.section2 h2 {/*@editable*/ color: #649132; }
+	.section3 h2 {/*@editable*/ color: #d68921; }
+	.sidebar h2 {/*@editable*/ color: #d68921; }
+
+	/**
+	* @tab PSNC Typography
+	* @section H2 link
+	* @tip Set the styling for all second-level heading links in your emails.
+	*/
+	h2 a:link, h2 a:visited, h2 a .yshortcuts, .h2 a:link, .h2 a:visited, .h2 a yshortcuts {
+		/*@editable*/ color:#444444 !important;
+		/*@editable*/ font-weight:bold;
+		/*@editable*/ text-decoration:none !important;
+	}
+	
+	.section1 h2 a {/*@editable*/ color: #523188 !important; }
+	.section2 h2 a {/*@editable*/ color: #649132 !important; }
+	.section3 h2 a {/*@editable*/ color: #d68921 !important; }
+	.sidebar h2 a {/*@editable*/ color: #d68921 !important; }
+
+	/**
+	* @tab PSNC Typography
+	* @section Heading 3
+	* @tip Set the styling for all third-level headings in your emails.
+	* @style heading 3
+	*/
+	h3, .h3{
+		/*@editable*/ color:#444444;
+		display:block;
+		/*@editable*/ font-family:Arial;
+		/*@editable*/ font-size:15px;
+		/*@editable*/ font-weight:bold;
+		/*@editable*/ line-height:100%;
+		margin-top:0;
+		margin-right:0;
+		margin-bottom:10px;
+		margin-left:0;
+		/*@editable*/ text-align:left;
+	}
+
+	/**
+	* @tab PSNC Typography
+	* @section H3 link
+	* @tip Set the styling for all third-level heading links in your emails.
+	*/
+	h3 a:link, h3 a:visited, h3 a .yshortcuts, .h3 a:link, .h3 a:visited, .h3 a .yshortcuts {
+		/*@editable*/ color:#444444 !important;
+		/*@editable*/ font-weight:bold;
+		/*@editable*/ text-decoration:none !important;
+	}
+
+	/**
+	* @tab PSNC Typography
+	* @section Heading 4
+	* @tip Set the styling for all fourth-level headings in your emails. These should be the smallest of your headings.
+	* @style heading 4
+	*/
+	h4, .h4{
+		/*@editable*/ color:#444444;
+		display:block;
+		/*@editable*/ font-family:Arial;
+		/*@editable*/ font-size:15px;
+		/*@editable*/ font-weight:bold;
+		/*@editable*/ line-height:100%;
+		margin-top:0;
+		margin-right:0;
+		margin-bottom:10px;
+		margin-left:0;
+		/*@editable*/ text-align:left;
+	}
+
+	/**
+	* @tab PSNC Typography
+	* @section H4 link
+	* @tip Set the styling for all fourth-level heading links in your emails.
+	*/
+	h4 a:link, h4 a:visited, h4 a .yshortcuts, .h4 a:link, .h4 a:visited, .h4 a .yshortcuts{
+		/*@editable*/ color:#444444 !important;
+		/*@editable*/ font-weight:bold;
+		/*@editable*/ text-decoration:none !important;
+	}
+	
+	/**
+	* @tab PSNC Typography
+	* @section Paragraph
+	* @tip Set the styling for all paragraph copy in your emails. 
+	* @style Paragraph
+	*/
+	p, li{
+		/*@editable*/ color:#444444;
+		display:block;
+		/*@editable*/ font-family:Arial;
+		/*@editable*/ font-size:15px;
+		/*@editable*/ font-weight:normal;
+		/*@editable*/ line-height:120%;
+		margin-top:0;
+		margin-right:0;
+		margin-bottom:10px;
+		margin-left:0;
+		/*@editable*/ text-align:left;
+	}
+
+	/**
+	* @tab PSNC Typography
+	* @section Paragraph link
+	* @tip Set the styling for all paragraph links in your emails.
+	*/
+	p a:link, p a:visited, p a .yshortcuts, .p a:link, .p a:visited, .p a .yshortcuts{
+		/*@editable*/ color:#444444 !important;
+		/*@editable*/ font-weight:normal;
+		/*@editable*/ text-decoration:underline !important;
+	}
+
+	
+	/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: FOOTER /\/\/\/\/\/\/\/\/\/\ */
+	
+	/**
+	* @tab PSNC Typography
+	* @section Heading 2 Footer
+	* @tip Set the styling for all second-level headings in your footer.
+	* @style heading 2
+	*/
+	.footer h2, .footer .h2{
+		color:#FFFFFF;
+		text-transform: uppercase;
+	}
+
+	/**
+	* @tab PSNC Typography
+	* @section H2 link Footer
+	* @tip Set the styling for all second-level heading links in your footer.
+	*/
+	.footer h2 a:link, .footer h2 a:visited, .footer .h2 a:link, .footer .h2 a:visited {
+		color:#FFFFFF !important;
+	}
+	
+	/**
+	* @tab PSNC Typography
+	* @section Paragraph Footer
+	* @tip Set the styling for all paragraph copy in your footer. 
+	* @style Paragraph
+	*/
+	.footer p, .footer li {
+		color:#FFFFFF;
+		font-size: 12px;
+	}
+
+	/**
+	* @tab PSNC Typography
+	* @section Paragraph link
+	* @tip Set the styling for all paragraph links in your footer.
+	*/
+	.footer p a:link, .footer p a:visited, .footer .p a:link, .footer .p a:visited {
+		color:#FFFFFF !important;
+	}
+
+
+	</style>
+
+</head>
+<body>
+
+<table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" bgcolor="#eceeed">
+	<tr>
+		<td valign="top"> 
+		<table cellpadding="0" cellspacing="0" border="0" align="center" width="600" bgcolor="#ffffff">
+			<!-- online version -->
+			<tr>
+				<td width="600" valign="middle" align="center" height="20" style="font-size:11px; color:#999999; font-family:Arial;">
+				</td>
+			</tr>
+			<!-- /online version -->
+			<!-- header -->
+			<tr>
+				<td width="600" valign="top">
+					<table cellpadding="0" cellspacing="" border="0" align="center">
+						<tr>
+							<td width="346" height="123" valign="top"><img class="image_fix" src="http://psnc.org.uk/wp-content/uploads/email_template/logo.jpg" alt="PSNC" title="Pharmaceutical Services Negotiating Committee" width="346" height="123" /></td>
+							<td width="234" height="123" valign="middle" align="left">
+								<img mc:edit="top_ad" style="max-width:234px;" mc:hidable />
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<!-- /header	 -->
+			<!-- coloured bar -->
+			<tr>
+				<td width="600" valign="top"><img class="image_fix" src="http://psnc.org.uk/wp-content/uploads/email_template/coloured-bar.jpg" alt="" title="" width="600" height="44" /></td>
+			</tr>
+			<!-- /coloured bar -->
+			<!-- main content -->
+			<tr>
+				<td width="600" valign="top">
+					<table cellpadding="0" cellspacing="" border="0" align="center" width="600">
+						<tr>
+							<td width="10" height="5"></td>
+							<td width="580" height="5"></td>
+							<td width="10" height="5"></td>
+						</tr>
+						<tr>
+							<td width="10"></td>
+							<!-- title -->
+							<td width="580" valign="top" align="left" mc:edit="title_text" style="font-size:18px; font-weight:bold; color:#513389; font-family:Arial;">
+								Email subject
+							</td>
+							<!-- /title -->
+							<td width="10"></td>
+						</tr>
+						<tr>
+							<td width="10" height="5"></td>
+							<td width="580" height="5"></td>
+							<td width="10" height="5"></td>
+						</tr>
+						<tr>
+							<td width="10" height="1" bgcolor="#513389"></td>
+							<td width="580" height="1" bgcolor="#513389"></td>
+							<td width="10" height="1" bgcolor="#513389"></td>
+						</tr>
+						<tr>
+							<td width="10" height="10"></td>
+							<td width="580" height="10"></td>
+							<td width="10" height="10"></td>
+						</tr>
+						<tr>
+							<td width="10"></td>
+							<!-- body -->
+							<td width="580" mc:edit="main_body">
+								<p>To Whom it May Concern,</p>
+								<p>Porttitor, integer augue, porttitor urna nascetur! Facilisis eu sit adipiscing? Enim nisi turpis ultricies, augue, sit eu et sagittis enim, arcu? Augue et natoque? Augue nunc pid et! Sagittis, et sed pulvinar lectus? Amet facilisis, lorem sit magnis mauris ut parturient mid et augue facilisis pulvinar mattis lacus? Dapibus ac.</p>
+								<p>Nunc! Odio nunc, tincidunt pellentesque? Natoque lundium tincidunt dapibus augue placerat? Turpis! Purus, diam est, nisi enim magna ut. Integer aliquet, quis egestas sit, nisi scelerisque cum lectus, vel, vut ultrices nisi sed velit massa habitasse natoque, quis cum, sit cursus quis a est. Massa tincidunt et tristique sagittis.</p>
+								<p>Ac quis rhoncus et dapibus? Sagittis lectus. Pulvinar augue, phasellus sagittis. Rhoncus nisi mattis! Ac aenean eros duis scelerisque etiam diam dapibus cras aenean penatibus et nisi porta nascetur. Massa amet, sagittis vel odio, magna etiam facilisis elementum magnis platea urna est aliquet ridiculus lacus in hac. Dolor? Risus.</p>
+
+								<p>Kind Regards,<br>
+								PSNC</p>
+							</td>
+							<!-- /body -->
+							<td width="10"></td>
+						</tr>
+						<tr>
+							<td width="10" height="10"></td>
+							<td width="580" height="10"></td>
+							<td width="10" height="10"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<!-- /main content -->
+			<!-- footer -->
+			<tr class="footer">
+				<td width="600" valign="top" bgcolor="#7c66a6">
+					<table cellpadding="0" cellspacing="" border="0" align="center" width="600">
+						<tr>
+							<td width="10" height="10"></td>
+							<!-- footer col1 -->
+							<td width="185" valign="top" height="10"></td>
+							<!-- /footer col1 -->
+							<td width="10" height="10"></td>
+							<!-- footer col2 -->
+							<td width="185" valign="top" height="10"></td>
+							<!-- footer col2 -->
+							<td width="10" height="10"></td>
+							<!-- footer col3 -->
+							<td width="190" valign="top" height="10"></td>
+							<!-- footer col3 -->
+							<td width="10" valign="top" height="10"></td>
+						</tr>
+						<tr>
+							<td width="10"></td>
+							<!-- footer col1 -->
+							<td valign="top" colspan="6">
+								<div mc:edit="footer_col1">
+								<h2>Contact Us</h2>
+								<p>Tel: 0203 1220 810 or 0844 831 4180</p>
+								<p>Email: <a href="mailto:info@psnc.org.uk" target="_blank">info@psnc.org.uk</a></p>
+								<p>Times House, 5 Bravingtons Walk<br />
+									London, N1 9AW</p>
+								<p><a href="http://psnc.org.uk/psncs-work/contact-us/" target="_blank">How to find us</a></p>
+								</div>
+							</td>
+							<!-- /footer col1 -->
+							<td width="10" valign="top"></td>
+						</tr>
+						<tr>
+							<td width="10" height="10"></td>
+							<!-- footer col1 -->
+							<td width="185" valign="top" height="10"></td>
+							<!-- /footer col1 -->
+							<td width="10" height="10"></td>
+							<!-- footer col2 -->
+							<td width="185" valign="top" height="10"></td>
+							<!-- footer col2 -->
+							<td width="10" height="10"></td>
+							<!-- footer col3 -->
+							<td width="190" valign="top" height="10"></td>
+							<!-- footer col3 -->
+							<td width="10" valign="top" height="10"></td>
+						</tr>
+						<tr>
+							<td colspan="7" width="600" height="30" valign="middle" align="center" style="font-size:11px; font-family:Arial; color:#ffffff;">You have received this email because you are part of the PSNC database. <a href="*|UNSUB|*" style="color:#ffffff;">Unsubscribe here.</a></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<!-- /footer -->
+		</table>
+
+
+		</td>
+	</tr>
+</table>  
+<!-- End of wrapper table -->
+</body>
+</html>

@@ -1,0 +1,201 @@
+/*
+Theme Name:     PSNC LPC
+Theme URI:
+Description:    PSNC Child theme
+Author:         Jellyhaus
+Author URI:		http://www.jellyhaus.com
+Template:       psnc
+Version:        1
+*/
+
+@import url("../psnc/style.css");
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/*------------------------------------*\
+    Global
+\*------------------------------------*/
+
+.global-banner {background: #d58721;}
+
+/* Header */
+.header {padding-top:0;}
+.logo {padding-right:2%;}
+.site-title h1 {color: #4f3388; font-size: 1.6em; line-height: 1;}
+.site-title h2 {}
+.pharmacy-logo {margin-top:5px;}
+.quick-links-search a.dropdown {background: #ecc491; border: 1px solid #d58721;}
+.quick-links-search h2 {color: #4f3388; font-size: 1.6em; line-height: 1; clear:both; margin-top: 20px;}
+.quick-links ul {background:#d58721; border:1px solid #d58721;}
+.search-input {background: #d58721; border: 1px solid #d58721;}
+input:focus.search-input {border: 1px solid #d58721;}
+button.search-submit {border: 1px solid #d58721; color: #93378a;}
+
+
+
+/*Main menu */
+
+nav.main-nav {width: 100%; height: 65px; background: url(img/nav-bg.png) repeat-x; position: relative;}
+nav.main-nav ul.root-menu {list-style-type: none; height: 65px; margin:0; padding: 0 0 0 5px; background: white;}
+
+nav.main-nav ul li {float: left; height: 65px; text-align: center; width: 14.28%; margin:0; padding:0; display: table; background: white; border-spacing:0;  border-collapse:collapse;}
+nav.main-nav ul li a { display: block; height: 65px; margin:0; width: 100%; padding:0 10px 0 10px; border-radius: 5px; font:1em/1.2 UbuntuBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white; line-height:1; display: table-cell; vertical-align: middle; border-left:3px solid white; border-right:3px solid white; background: grey;}
+
+nav.main-nav {background: url(img/nav-bg.png) repeat-x;}
+nav.main-nav ul.root-menu {background: none; overflow: hidden; }
+nav.main-nav ul li {width: 14%; display: table; background: white;}
+nav.main-nav ul li a { background: #edeaf3; color: #4f3388; border-left:3px solid white; border-right:3px solid white; border-radius:0; margin:0; width: 100%; padding:0 10px 0 10px; line-height:1; display: table-cell; vertical-align: middle;}
+nav.main-nav ul li a:nth-child(1) {margin-left:0;}
+nav.main-nav ul li a:nth-child(7) {display: none;}
+nav.main-nav ul li a:hover, nav.main-nav ul li.hover a, nav.main-nav ul li.current_page_item a {background-color: #d58721; color: white; box-shadow: none;}
+nav.main-nav ul.children, nav.main-nav ul li ul.child-menu {background: #d58721; } 
+nav.main-nav ul li ul.child-menu li {background:none;}
+nav.main-nav ul li ul.child-menu li a {border:0; background: none;}
+nav.main-nav ul li ul.children li {float: left; width: auto; display: block; height: auto; text-align: left; margin:0; padding:5px 20px 5px 0; line-height:normal; background: none;}
+nav.main-nav ul li ul.children li a { display: block; height: auto; width: auto; margin: 0; padding:0; border-radius: none; font:1.5em/1.2 UbuntuBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-transform: uppercase; color: grey; background: none; border:0; line-height:1;}
+nav.main-nav ul li ul.children li a:hover, nav.main-nav ul li a.selected {background: none; text-decoration: underline; border:0;}
+
+
+/* Home */
+
+.home-intro {max-height:280px; overflow: hidden; font-size: 1em; line-height: 1.4; padding-right:20px; min-height:280px;}
+.home-intro strong {font-weight: bold;}
+.home-page.slideshow .slideshow-text strong, .home-page.slideshow .slideshow-text b {color:#4f3388 }
+.latest-psnc h2 {color:#4f3388 ;}
+.latest-psnc h3 a {color: #937dbf;}
+.latest-psnc h3 a:hover {color: #4f3388;}
+.home-utility h2 {text-transform: uppercase; color: #d58721;}
+.home-utility a {color:#d58721; }
+
+
+
+
+
+/* Footer */
+.footer-news {margin-top: 30px;}
+.lpc-news {background: #faeede; width: 47.5%; margin-right:2.5%; padding-top:10px; min-height: 190px;}
+.lpc-news a {color: #d58721;}
+.lpc-news a:hover {text-decoration: underline;}
+.psnc-news {background: #edeaf3; width: 50%; padding-top:10px; min-height: 190px;}
+.psnc-news a {color:#4f3388; }
+.psnc-news a:hover {text-decoration: underline;}
+.footer-news h2 {text-transform: uppercase; margin:0 0 10px 0; font-size: 1.17em; padding-bottom:15px; }
+.footer-news .psnc-news h2, .footer-news .psnc-news article {border-bottom: 1px solid #d8ceec;}
+.footer-news .lpc-news h2, .footer-news .lpc-news article {border-bottom: 1px solid #f7debf;}
+.footer-news article h3 {margin:0; padding:0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:1em; line-height: 1.1;}
+.footer-news p {margin-top:5px;}
+.footer-news article { padding:10px; margin-bottom:10px; border-bottom:1px solid white; padding-top:0; min-height:45px;}
+
+.footer {margin-top:0px; background: #d58721; }
+ul#menu-footer-menu {padding:0;}
+ul#menu-footer-menu li {width: auto ; padding:0; list-style-type: none; margin:0;}
+ul#menu-footer-menu li a {text-transform:none;font:1em/1.2 'Helvetica Neue', Helvetica, Arial, sans-serif; text-decoration: none; }
+ul#menu-footer-menu li a:hover {text-decoration: underline;}
+.footer .current_page_item a {background: none;}
+
+#mc_signup_form {background-color: #ecc390;}
+#mc_signup_form label {color:#d58721; }
+#mc_signup_form input[type=text] {background: #d58721;}
+#mc_signup_form input[type=submit] {color: #4f3388 ;}
+
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+.mobileelement {display: none;}
+
+@media only screen and (max-width:767px) {
+	/* Second level */
+	.l2-table {display: none;}
+	.header {padding-top:0;}
+
+	/* LPC Online home */
+	
+	.lpc-online {margin: 0 !important;}
+	.lpc-online td {width:100% !important; }
+	.lpc-online select {max-width: 100% !important;}
+	
+	
+}
+
+@media only screen and (max-width:480px) {
+
+	/* Global */
+	
+	.wrapper {min-width: 0;}
+	
+	.mobileelement {display: block;}
+	.hideformobile {display: none;}
+	
+	.eleven.columns {width: 100%;}
+	
+	.show-hide a {display: block; width: 100%;}
+	.show-hide a:before {font-family: psncicons; float: left; content: '\25be'; padding-right: 10px;}
+	.show-hide a.open:before {font-family: psncicons; float: left; content: '\25b4'; padding-right: 10px;}
+	
+	/* Header */
+	.logo.three.columns {width: 30%;}
+	.site-title.four.columns {width: 70%; padding-top: 20px;}
+	.pharmacy-logo.three.columns {display: none;}
+	.utility.six.columns {width: 100%; margin-left: 0; margin-bottom: 20px;}
+	.share-login {display: none;}
+	.quick-links, form.search {width: 100%;}
+	.quick-links {display: none;}
+	form.search {margin-top:10px;}
+	.quick-links-search h2 {display: none;}
+
+	/* Nav */
+	.show-hide.main-menu a {width: 100%; background: #4e3487; color: white; border: 1px solid #ccc; margin-bottom: 10px; font-family: UbuntuBold; text-transform: uppercase; padding: 10px;  }
+	nav.main-nav {background: none;}
+	nav.main-nav, nav.main-nav ul.root-menu {height:auto; width:100%;}
+	nav.main-nav ul li, nav.main-nav ul li a {width:100%; height: 35px; border-radius: 0;} 
+	nav.main-nav ul li {border-bottom: 1px solid white;}
+	nav.main-nav ul li ul.child-menu {}
+	nav.main-nav.mobileelement {clear:left;}
+	 
+	 /*Dropdown*/
+	nav.main-nav ul.child-menu {position: static; min-height: 0;}
+	nav.main-nav ul li ul.child-menu li, nav.main-nav ul li ul.child-menu li ul.child-menu {display: none !important;}
+	
+	/* Footer */
+	footer .four.columns {width: 100%;}
+	
+	/* Home */
+	.home-intro.five.columns {width: 100%;}
+	.home-page.slideshow .slideshow-image {width: 100%;}
+	.home-page.slideshow img {width: 100%; height:auto; min-height: 260px;}
+	.home-page.slideshow .slideshow-text {position: absolute;bottom: 0;left: 0;height: 50%;opacity: .9; font-size:1em; width: 100%;}
+	.home-resources.one-third.column.latest-psnc, .home-events.one-third.column {width: 50%;}
+	.home-utility.one-third.column {width: 100%;}
+	
+	/* Page */
+	.sidebar-nav.four.columns {width: 100%; padding:0;}
+	.sidebar-nav li.hideformobile {display: none;}
+	.sidebar-nav li.toggle {margin:0; padding:0;}
+	.show-hide.sidebar a {margin: 0; padding:10px; border: 1px solid #4e3487; background: whitesmoke;}
+	.page-content.twelve.columns {width: 100%;}
+	.page-news-releases h2 {float: left;}
+	a.view-more {float:left; margin-bottom: 10px;}
+	a.view-more:before {content:''; display: table; clear: left;}
+	
+	.news-template-box {width: 100%; border:0; padding:0; border-bottom: 1px dotted #ccc; padding-bottom: 10px; margin-right:0 ;}
+	
+	/* Sliders */
+	.bx-wrapper .bx-controls-direction a {top:20% !important; padding:5px; background-color: white;}
+	.bx-wrapper .bx-prev {left:0 !important;}
+	.bx-wrapper .bx-next {right:0 !important;}
+	.news-box {border:0; padding:0;}
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}

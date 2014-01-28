@@ -1,0 +1,42 @@
+
+.quick-links {display:none;}
+nav.main-nav ul li ul.child-menu {display: none !important;}
+li.featured-menu-item {display: none !important;}
+.bx-wrapper  {display: none !important;}
+.mobileelement {display: none;}
+
+ .wrapper {	width:960px;}
+
+ .one.column {width: 40px;}  .two.columns {width: 100px;}  .three.columns {width: 160px;}  .four.columns {width: 220px;}  .five.columns {width: 280px;}  .six.columns {width: 340px;}  .seven.columns {width: 400px;}  .eight.columns {width: 460px;}  .nine.columns {width: 520px;}  .ten.columns {width: 580px;}  .eleven.columns {width: 640px;}  .twelve.columns {width: 700px;}  .thirteen.columns {width: 760px;}  .fourteen.columns {width: 820px;}  .fifteen.columns {width: 880px;}  .sixteen.columns {width: 940px;}  .one-third.column {width: 300px;}  .two-thirds.column {width: 620px;}
+
+ .site-title {font:0.9em/1 UbuntuBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+
+ .quick-links-search a.dropdown {padding-left:10px; width: 120px;}
+ .quick-links ul,  .quick-links li {width: 160px;}
+ .quick-links li a {padding:5px; width: 150px;}
+
+ form.search {width: 200px;}
+ button.search-submit {position: absolute; right:-13px; bottom:-4px; background:url(img/search.png) center center no-repeat white; border: 1px solid #c59ec6; height:36px; width: 30px;}
+
+ nav.main-nav {width: 960px; margin:0 auto;}
+ nav.main-nav ul.root-menu {padding: 0;}
+
+ .menu-psncs-work,  .menu-funding-and-statistics,  .menu-pharmacy-contract-and-funding,  .menu-dispensing-and-supply,  .menu-services-and-commissioning,  .menu-the-healthcare-landscape,  .menu-lpcs /*  .menu-news,*/ {width: 128px; margin: 0 3px 0 0; height: 70px; padding:0;}
+
+ .menu-psncs-work a,  .menu-funding-and-statistics a,  .menu-pharmacy-contract-and-funding a,  .menu-dispensing-and-supply a,  .menu-services-and-commissioning a,  .menu-the-healthcare-landscape a,  .menu-lpcs a /*  .menu-news a, */{ width: 128px; padding:10px 0 0 0; line-height: 1.1; height: 60px;}
+
+ nav.main-nav ul.child-menu {padding: 10px; width: 940px; top:75px;} 
+
+ nav.main-nav ul li ul.child-menu li.featured-menu-item {display: none;}
+ nav.main-nav ul li ul.child-menu li {width: 215px; word-wrap:break-word; white-space: pre; display: block; }
+ nav.main-nav ul li ul.child-menu li:before { content: ''; display: none; }
+ nav.main-nav ul li ul.child-menu li a {width: 215px; }
+ nav.main-nav ul li ul.child-menu li ul.child-menu {width: 215px; margin:0; padding:0;}
+ nav.main-nav ul li ul.child-menu li ul.child-menu li {width: 215px; margin:0;  padding: 5px 0;}
+
+hr {border: 0; background: white; margin:0; padding:0;}
+
+.footer {background-image: none;}
+
+
+

@@ -1,0 +1,1004 @@
+/*
+	Theme Name: PSNC.org.uk
+	Theme URI: http://psnc.org.uk
+	Description: PSNC.org.uk website theme
+	Version: 1
+	Author: Jellyhaus
+	Author URI: http://www.jellyhaus.com
+	Tags: 
+
+*/
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-sizing */
+*, *:after, *:before { -moz-box-sizing:border-box; 	-webkit-box-sizing:border-box;	 box-sizing:border-box;	-webkit-font-smoothing:antialiased;	font-smoothing:antialiased;	text-rendering:optimizeLegibility;}
+html {font-size:100%;}
+body {	font:1em/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;	color:#444;}
+
+/* clear */
+.clear:before,.clear:after {    content:' ';    display:table;}
+.clear:after {    clear:both;}
+.clear {    *zoom:1;}
+
+img {	max-width:100%;	vertical-align:bottom;}
+a {	color:#444;	text-decoration:none;}
+a:hover {	color:#444;}
+a:focus {	outline:0;}
+a:hover,a:active {	outline:0;}
+input:focus {	outline:0;	}
+hr {clear: both; width: 100%; height: 20px; border:0;border-bottom: 1px solid #ccc; margin:10px 0;}
+hr.hrwhite {border-bottom-color:white;}
+hr.dashed {border-bottom-style: dashed;}
+
+.expired {opacity:.5;}
+
+/* tables */
+table {font-size: 1em;	margin: 15px;	width: auto;	text-align: left;	border-collapse: separate; color: #444; border: 1px solid #ccc;}
+th {	font-size: 1.2em;	font-weight: bold;	padding: 8px;	border-right: 1px solid #ccc; border-bottom: 1px solid #ccc;	}
+td {	padding: 8px;	border-right: 1px solid #ccc; border-bottom: 1px solid #ccc;}
+td.lastcol {border-right: 0;} /* Class added by jQuery */
+td.lastrow {border-bottom: 0;} /* Class added by jQuery */
+/*table tr:hover td {	background: #ccc;}*/
+td p {min-height: 0;} /* Override autop bug */
+
+/* Forms (incl Formidable) */
+.frm_forms {width: 100%; }
+.frm_forms:after {content:' ';    display:table; clear: both; *zoom:1;}
+footer .frm_forms {border: 0; padding:0;}
+.frm-show-form {padding:0;}
+.frm_form_fields {clear: left;}
+.frm_description p {margin:10px 0;}
+.frm_description {float:left; clear:left; font-style: italic; font-size: 0.9em;}
+.frm_form_field.frm_left_half, .frm_form_field.frm_right_half, .frm_form_field.frm_first_half, .frm_form_field.frm_last_half {width: 46%;}
+.frm_primary_label {font-weight: bold; float:left; clear:left; margin-right:10px;}
+.frm_form_field {float:left; clear:left; margin-top: 10px;}
+.frm_form_fields input[type=text], .frm_form_fields input[type=tel], .frm_form_fields input[type=email], .frm_form_fields input[type=url], .frm_form_fields input[type=password], .frm_form_fields textarea {max-width: 100%; clear: left; float: left; margin-top: 3px; border:1px solid #ccc; padding:3px; width: 100%;}
+footer .frm_form_fields input[type=text], footer .frm_form_fields input[type=tel], footer .frm_form_fields input[type=email], footer .frm_form_fields input[type=url], footer .frm_form_fields input[type=password], footer .frm_form_fields textarea {width: 100%;}
+.frm_opt_container, .frm_form_fields select, .frm_opt_container {float:left; clear:left;}
+.frm_form_fields input[type=checkbox] {margin-right: 10px;}
+.frm_radio, .frm_checkbox { float: left; margin: 2px 0 0 0; clear:left;}
+.horizontal_radio .frm_primary_label {margin-bottom: 10px;}
+.horizontal_radio .frm_radio, .horizontal_radio .frm_checkbox { float: left; margin: 0 10px 10px 0;clear: none;}
+.frm_form_fields input[type="checkbox"], .frm_form_fields input[type="radio"] {margin-right: 5px;}
+input[type=submit] {border: 0; font: 1.2em/1.8 UbuntuRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align: center; padding: 0 5px; clear: both; float: left; height: 1.5em; line-height: 1.5em; color: white; background: #d58721; margin-top: 10px;}
+footer input[type=submit] {color: #d58721; background: white; }
+p.submit {min-height: 4em;}
+.frm_error_style {background: red; color: white; padding: 10px;}
+.frm_error {color: red; font-weight: bold; clear:left;}
+footer .frm_error {color: black;}
+
+.inline-login label, .inline-login input, .inline-login p {float:left; clear: left;}
+.inline-login label, .inline-login p {margin-top:10px;}
+.inline-login input[type=checkbox] {margin-top:5px; margin-right: 10px; float: left;}
+.inline-login input[type=text], .inline-login input[type=password] {border:1px solid #666; padding-left:10px; line-height: 2em; height:2em;}
+.inline-login input:focus {border:1px solid #666;}
+
+.ui-datepicker-year {display: inline !important;	}
+
+
+/*------------------------------------*\
+    GLOBAL
+\*------------------------------------*/
+
+.global-banner {width: 100%; padding: 20px 0; background: #d58721; text-align: center; color: white; position: font-weight: bold;}
+.global-banner a, .chromeframe a {text-decoration: underline; color: white;}
+.chromeframe {width: 100%; padding: 5px 0; background: black; text-align: center; color: white; position: font-weight: bold;}
+
+#cookie-law {     width:100%;   background:black; position: fixed; bottom: 0; left: 0; opacity: .8; z-index: 99999; }
+#cookie-law p { padding:30px; font-size:1em; text-align:center; color:white;  margin:0; }
+#cookie-law p a {text-decoration: underline; color: #fff;}
+#cookie-law p a:hover {text-decoration: none;}
+
+/* wrapper and columns */
+
+#content.widecolumn {max-width:1280px;	width:95%;	margin:0 auto;}
+#content.widecolumn a {text-decoration: underline;}
+
+.wrapper {	max-width:1280px; 	width:95%;	margin:0 auto;	position:relative; min-width: 960px;}
+.column, .columns {padding:0 10px; float:left; display: inline;}
+.one.column {width: 6.25%;} .two.columns {width: 12.5%;} .three.columns {width: 18.75%;} .four.columns {width: 25%;} .five.columns {width: 31.25%;} .six.columns {width: 37.5%;} .seven.columns {width: 43.75%;} .eight.columns {width: 50%;} .nine.columns {width: 56.25%;} .ten.columns {width: 62.5%;} .eleven.columns {width: 68.75%;} .twelve.columns {width: 75%;} .thirteen.columns {width: 81.25%;} .fourteen.columns {width: 87.5%;} .fifteen.columns {width: 93.75%;} .sixteen.columns {width: 100%;} .one-third.column {width: 33.3%;} .two-thirds.column {width: 66.6%;}
+
+.offset-by-one {margin-left: 6.25%;}
+.offset-by-two {margin-left: 12.5%;}
+.offset-by-three {margin-left: 18.75%;}
+.offset-by-four {margin-left: 25%;}
+.offset-by-five {margin-left: 31.25%;}
+
+.post-edit-link {padding:5px; background: whitesmoke; color: grey; margin: 10px 0; float: left; font-size: 0.8em;}
+a:hover.post-edit-link {color: white; background: #333;}
+.post-edit-link:after { content: '  \270e'; } /* '✎' */
+
+/* header */
+.header {}
+.logo {padding:20px 0; text-align: center;}
+.logo-img {max-height: 100px; }
+.site-title {font:1.1em/1 UbuntuBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #4e3487; padding-top:30px;}
+.utility {z-index: 1000;}
+.share-login, .quick-links-search {float:left; clear:left; width: 100%;z-index: 1000; }
+.share-login {margin:10px 0; font-size: .8em; text-align: right;}
+.share-login a span {color: #4f3388;}
+.share-login a {text-decoration: underline;}
+.share-login .addthis_toolbox {float:right;}
+.quick-links {position: relative; height:2em; width: 40%; float:left; z-index: 1000;}
+.quick-links-search a.dropdown {background: #c59ec6; display: block; font:1em/1.8 UbuntuBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-transform: uppercase; color: white; padding-left:1%; border: 1px solid #4e3487; float:left; width:100%; height:2em; cursor: pointer;}
+.quick-links ul {background:#4e3487; position: absolute; left:0; top:2em; width: 100%; border:1px solid #4e3487; border-top:0; z-index: 1; display: none;}
+.quick-links ul, .quick-links li {padding:0; margin:0; list-style-type: none;}
+.quick-links li {line-height: 1em; width: 100%;}
+.quick-links li a {font-family:UbuntuBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; color: white; padding:.5em; width: 100%; display: block;}
+.quick-links li a:hover, .quick-links li.current_page_item > a {background: white; color: #d58721;}
+form.search {position: relative; height: 2em; float:right; width: 50%; }
+.search-input {background: #4e3487; border: 1px solid #c59ec6; width: 100%; font:1em/1.8 UbuntuBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; padding-left:10px; color: white; float:right; height: 2em; padding-right:20px}
+input:focus.search-input {border: 1px solid #c59ec6;}
+button.search-submit {position: absolute; right:0; bottom:0; background: white; border: 1px solid #c59ec6; height:2em; font-size: 1em; color: #93378a;}
+a.advanced-search {float:right; font-size: .9em; margin-top:5px; text-decoration: underline;}
+a:hover.advanced-search {text-decoration: none;}
+
+/* Widgets */
+
+.footer .widget_nav_menu ul {list-style-type: none; margin:0; padding:0; line-height: 1.5;}
+.footer .widget_nav_menu ul {font-weight: bold;}
+.footer .widget_nav_menu ul.sub-menu {font-weight: normal; padding-left:10px;}
+
+.widget_twitter ul {list-style-type: none; padding: 0; margin: 0 0 10px 0; font-size: 1em;}
+.footer .widget_twitter ul {border-top: 1px solid white;}
+.widget_twitter ul li {padding: 10px 0; margin:0; border-bottom: 1px solid #ccc;}
+.widget_twitter ul li:first-child {padding:0 0 10px 0;}
+.footer .widget_twitter ul li {border-bottom: 1px solid white;}
+.widget_twitter ul li .entry-meta {opacity: .5; font-size: .8em;}
+.widget_twitter ul li .intent-meta a {padding-right:5px; font-size: .8em; text-decoration: none; font-weight: bold;}
+.widget_twitter ul li .intent-meta a.in-reply-to:before {content: '\e802 '; font-family: "psncicons"; padding-right:3px;}
+.widget_twitter ul li .intent-meta a.retweet:before {content: '\e801 '; font-family: "psncicons"; padding-right:3px;}
+.widget_twitter ul li .intent-meta a.favorite:before {content: '\e800 '; font-family: "psncicons"; padding-right:3px;}
+#mc_signup_form {background-color: #c59ec6; border:0; content:' ';    display:table; clear:both; *zoom:1; width: 100%; padding:10px;}
+#mc_signup_form label {float:left; clear: left; font:1em/1.8 UbuntuBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#4e3487; }
+#mc_signup_form input[type=text] {border:1px solid white; font:1em/1.8 UbuntuBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; padding-left:10px; float:left; clear: left; height: 1.8em; background: #4e3487; color: white; width: 100%;}
+#mc_signup_form input[type=submit] {border:1px solid white; font:1em/1.8 UbuntuBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align: center; padding: 0 10px; clear: both; float: right; height: 2em; color: #93378a ; background: white; text-transform: uppercase; margin-top:10px;}
+#mc_display_rewards, #mc-indicates-required {display: none;}
+
+/* Plugins */
+
+.with_frm_style {font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+.with_frm_style input[type=submit] {border-radius: 0; height: 2em; line-height: 2em; width: 50px; font:1em/1.2 UbuntuBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align: center; background:#4f3388 ; color: white; text-shadow: none;}
+/* Popup plugin */
+.visiblebox #message {border: 1px solid #ccc; box-shadow: 0 0 500px rgba(25, 25, 25, 0.95);}
+
+
+
+/* footer */
+.footer {margin-top:30px; width: 100%; background: url(img/footer-bg.png) 5% 50% no-repeat #7b66a6; color: white; padding-bottom:30px;}
+.footer h3 {text-transform: uppercase;}
+.footer li {font-size: 0.9em;}
+.footer a {color: white; text-decoration: underline;}
+.footer a:hover {text-decoration: none;}
+.footer .current_page_item > a { background: none; text-decoration: none; }
+.footer-credits p {text-align: center; font-size: .8em;}
+
+/*------------------------------------*\
+    NAV
+\*------------------------------------*/
+
+nav.main-nav {width: 100%; height: 71px; background: url(img/nav-bg.png) repeat-x; position: relative; z-index: 999;}
+nav.main-nav ul.root-menu {list-style-type: none; height: 71px; margin:0; padding: 0 0 0 5px; background: white; z-index: 999;}
+
+/* New css */
+.menu-psncs-work, .menu-news, .menu-funding-and-statistics, .menu-pharmacy-contract-and-funding, .menu-dispensing-and-supply, .menu-services-and-commissioning, .menu-the-healthcare-landscape, .menu-lpcs { float: left; height: 65px; text-align: center; width: 13.4%; margin: 0; padding: 0; /* display: table; */ background: white; border-spacing: 0; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; margin-right: 1%;  z-index: 999;}
+
+.menu-psncs-work a, .menu-news a, .menu-funding-and-statistics a, .menu-pharmacy-contract-and-funding a, .menu-dispensing-and-supply a, .menu-services-and-commissioning a, .menu-the-healthcare-landscape a, .menu-lpcs a { display: block; height: 100%; margin: 0; width: 100%; padding: 0 10px 0 10px; font: 1em/1.2 UbuntuBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; color: black; line-height: 1;
+/* display: table-cell; */ vertical-align: middle; background: none; }
+
+/* Home */
+.home .menu-psncs-work {border: 3px solid #93378a; background: #93378a;}
+/*.home .menu-news {border: 3px solid #c3137b; background: #c3137b;}*/
+.home .menu-funding-and-statistics {border: 3px solid #c3137b; background: #c3137b;}
+.home .menu-pharmacy-contract-and-funding {border: 3px solid #f2e634; background: #f2e634;}
+.home .menu-dispensing-and-supply {border: 3px solid #65922e; background: #65922e;}
+.home .menu-services-and-commissioning {border: 3px solid #519680; background: #519680;}
+.home .menu-the-healthcare-landscape {border: 3px solid #5185c0; background: #5185c0;}
+.home .menu-lpcs {border: 3px solid #d58721; background: #d58721;}
+.home .menu-psncs-work a, .home .menu-news a, .home .menu-funding-and-statistics a, .home .menu-dispensing-and-supply a, .home .menu-services-and-commissioning a, .home .menu-the-healthcare-landscape a, .home .menu-lpcs a {color: white;}
+
+/* Other pages */
+.menu-psncs-work {border: 3px solid #93378a; padding-top: 20px;}
+.menu-psncs-work a {color: #93378a;}
+/*.menu-news {border: 3px solid #c3137b; padding-top: 20px;}
+.menu-news a {color: #c3137b;}*/
+.menu-funding-and-statistics {border: 3px solid #c3137b; }
+.menu-funding-and-statistics a {color: #c3137b;padding-top: 12px;}
+.menu-pharmacy-contract-and-funding {border: 3px solid #f2e634; }
+.menu-pharmacy-contract-and-funding a {color: #916e10; padding:0 15px; padding-top: 20px;}
+.menu-dispensing-and-supply {border: 3px solid #65922e; }
+.menu-dispensing-and-supply a {color:#65922e; padding-top: 12px; }
+.menu-services-and-commissioning {border: 3px solid #519680; }
+.menu-services-and-commissioning a {color: #519680;padding-top: 12px;}
+.menu-the-healthcare-landscape {border: 3px solid #5185c0; }
+.menu-the-healthcare-landscape a {color:#5185c0; padding-top: 12px;}
+.menu-lpcs {border: 3px solid #d58721;  margin-right:0;}
+.menu-lpcs a {color: #d58721; padding-top: 20px;}
+
+/* Selected pages */
+nav.main-nav .current_page_item > a {background: none;} /* Reset */
+.menu-psncs-work.current-menu-item, .menu-psncs-work.hover, .menu-psncs-work.current-page-ancestor {background: #93378a; }
+/*.menu-news.current-menu-item, .menu-news.hover, .menu-news.current-page-ancestor {background: #c3137b;}*/
+.menu-funding-and-statistics.current-menu-item, .menu-funding-and-statistics.hover, .menu-funding-and-statistics.current-page-ancestor {background: #c3137b;}
+.menu-pharmacy-contract-and-funding.current-menu-item, .menu-pharmacy-contract-and-funding.hover, .menu-pharmacy-contract-and-funding.current-page-ancestor {background: #f2e634;  } .menu-pharmacy-contract-and-funding a, .menu-pharmacy-contract-and-funding.hover a {color: #916e10;}
+.menu-dispensing-and-supply.current-menu-item, .menu-dispensing-and-supply.hover, .menu-dispensing-and-supply.current-page-ancestor {background: #65922e;}
+.menu-services-and-commissioning.current-menu-item, .menu-services-and-commissioning.hover, .menu-services-and-commissioning.current-page-ancestor {background: #519680;}
+.menu-the-healthcare-landscape.current-menu-item, .menu-the-healthcare-landscape.hover, .menu-the-healthcare-landscape.current-page-ancestor {background: #5185c0;}
+.menu-lpcs.current-menu-item, .menu-lpcs.hover, .menu-lpcs.current-page-ancestor {background: #d58721;}
+
+.menu-psncs-work.current-menu-item a, .menu-news.current-menu-item a, .menu-funding-and-statistics.current-menu-item a, .menu-dispensing-and-supply.current-menu-item a, .menu-services-and-commissioning.current-menu-item a, .menu-the-healthcare-landscape.current-menu-item a, .menu-lpcs.current-menu-item a, .menu-lpcs.hover a, .menu-psncs-work.hover a, .menu-news.hover a, .menu-funding-and-statistics.hover a, .menu-dispensing-and-supply.hover a, .menu-services-and-commissioning.hover a, .menu-the-healthcare-landscape.hover a, .menu-lpcs.hover a, .menu-psncs-work.current-page-ancestor a, .menu-news.current-page-ancestor a, .menu-funding-and-statistics.current-page-ancestor a, .menu-dispensing-and-supply.current-page-ancestor a, .menu-services-and-commissioning.current-page-ancestor a, .menu-the-healthcare-landscape.current-page-ancestor a, .menu-lpcs.current-page-ancestor a {color: #fff; }
+/* end New css */
+
+/* Dropdowns */
+nav.main-nav ul.child-menu {min-height: 200px;  position: absolute; top:60px; left:0; right:0; z-index: 999; padding: 2% 25% 2% 2%; display:none; margin: 0; content:' ';     clear:both; *zoom:1; width: 100%;} 
+nav.main-nav ul li ul.child-menu li {float: left; width: 25%; display: block; height: auto; text-align: left; padding:0 10px 0 10px; line-height:normal; background: none;  }
+nav.main-nav ul li ul.child-menu li:before { content: '\25b8'; float: left; color: white; margin-left: -15px; }
+nav.main-nav ul li ul.child-menu li a { display: block; height: auto; width: auto; margin: 0; padding:0; border-radius: none; font:1em/1.2 UbuntuBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-transform: none; color: white; width:100%; white-space: normal; border:0; }
+nav.main-nav ul li ul.child-menu li ul.child-menu {min-height:auto; background: none; position: static; padding:0; display: block;}
+nav.main-nav ul li ul.child-menu li ul.child-menu li {float:left; clear: left; width: 100%; white-space: normal; margin-top: 5px; margin-left: 10px;}
+nav.main-nav ul li ul.child-menu li ul.child-menu li:before { content: '';}
+nav.main-nav ul li ul.child-menu li ul.child-menu li a {font-family: UbuntuRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;} 
+nav.main-nav ul li ul.child-menu li a:hover, nav.main-nav ul li a.selected {border: none; box-shadow:none; color: white; text-decoration: underline;}
+
+
+nav.main-nav ul li.menu-psncs-work ul.child-menu {background: #93378a;}
+/*nav.main-nav ul li.menu-news ul.child-menu {background: #c3137b;}*/
+nav.main-nav ul li.menu-funding-and-statistics ul.child-menu {background: #c3137b;}
+nav.main-nav ul li.menu-pharmacy-contract-and-funding ul.child-menu {background: #f2e634;} nav.main-nav ul li.menu-pharmacy-contract-and-funding ul.child-menu li a, nav.main-nav ul li.menu-pharmacy-contract-and-funding ul.child-menu li.featured-menu-item p {color: #916e10 !important;}
+nav.main-nav ul li.menu-dispensing-and-supply ul.child-menu {background: #65922e;}
+nav.main-nav ul li.menu-services-and-commissioning ul.child-menu {background: #519680;}
+nav.main-nav ul li.menu-the-healthcare-landscape ul.child-menu {background: #5185c0;}
+nav.main-nav ul li.menu-lpcs ul.child-menu {background: #d58721;}
+
+nav.main-nav ul li.menu-psncs-work ul.child-menu li.featured-menu-item {background: #93378a;}
+/*nav.main-nav ul li.menu-news ul.child-menu li.featured-menu-item {background: #c3137b;}*/
+nav.main-nav ul li.menu-funding-and-statistics ul.child-menu li.featured-menu-item {background: #c3137b;}
+nav.main-nav ul li.menu-pharmacy-contract-and-funding ul.child-menu li.featured-menu-item {background: #f2e634;} nav.main-nav ul li.menu-item-3 ul.child-menu a {color: #916e10;}
+nav.main-nav ul li.menu-dispensing-and-supply ul.child-menu li.featured-menu-item {background: #65922e;}
+nav.main-nav ul li.menu-services-and-commissioning ul.child-menu li.featured-menu-item {background: #519680;}
+nav.main-nav ul li.menu-the-healthcare-landscape ul.child-menu li.featured-menu-item {background: #5185c0;}
+nav.main-nav ul li.menu-lpcs ul.child-menu li.featured-menu-item {background: #d58721;}
+
+/* Featured items */
+.noscript-hide {display: none;}
+nav.main-nav ul li ul.child-menu li.featured-menu-item {width: 25% ; max-height: 180px; padding:1% 2%; min-height: 180px; overflow: hidden; position: absolute; top:10px; right:10px; border-left: 1px solid white;}
+nav.main-nav ul li ul.child-menu li.featured-menu-item:before {content: ''; float: left; color: white; margin-right: 5px;}
+.featured-menu-item-image {border: 1px solid white; width: 45%; overflow: hidden; float: left; margin-right: 5%; margin-bottom: 70px;}
+.featured-menu-item-image img {width: 100%; }
+.featured-menu-item-text {float: left; width: 50%}
+.featured-menu-item-text h2 {margin: 0;}
+.featured-menu-item-text h2 a {font-size:.7em !important ; line-height:1 !important; }
+nav.main-nav ul li ul.child-menu li.featured-menu-item p {margin:5px 0; color: white;}
+nav.main-nav ul li ul.child-menu li.featured-menu-item p a {font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; text-decoration: underline;}
+.menu-order {display: none;}
+
+
+
+/*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+
+/* global stuff */
+
+span.date {font-size: .75em;}
+p.date {font-size: .75em; line-height: 1.5; margin: 5px 0; color: #93378a;}
+.lpc a {text-decoration: underline; color: #4f3388;}
+.lpc a:hover {text-decoration: none;}
+.page-content p {clear: left;}
+.page-content li {font-size: .9em}
+.page-content li p {font-size: 1em; margin: 0;}
+.page-content a {text-decoration: underline; color:#4f3388;}
+.page-content a:hover {text-decoration: none;}
+.page-content .wp-post-image {float: right; margin:20px 0 20px 20px; border: 1px solid #ccc;}
+.page-content iframe, .page-content table, .page-content div {max-width: 100% !important; }
+.breadcrumb {font-size: .8em; margin-top:15px;}
+.breadcrumb a {text-decoration: underline;}
+.breadcrumb a:hover {text-decoration: none;}
+
+.pagination {margin: 1em;text-align: center; padding: 1em;color: #5f3ea3; }
+.pagination .page-numbers {padding:1em; }
+.pagination .page-numbers.current, .search-page .pagination a.page-numbers:hover {padding:1em; color:white; background: #7b66a6; }
+.pagination a.page-numbers { text-decoration: none;}
+a.next-post, a.prev-post { padding: 10px; background: #7b66a6; margin: 10px; color: white; }
+a.next-post {float:left; margin-left:0;}
+a.prev-post {float:right; margin-right: 0;}
+
+.hideforlpc {display:none;}
+
+/* home */
+h1.home-title {text-indent: -9000px; height:1em; margin:0;}
+.psnc-home-intro ul {list-style-type: none; margin:0; padding:0;}
+.psnc-home-intro ul li {margin:5px 10px 0 0; padding:10px 0; border-bottom: 1px dashed #ccc; line-height: 1.2; font-size: .9em;}
+.psnc-home-intro b a, .psnc-home-intro a b, .psnc-home-intro strong a, .psnc-home-intro a strong {font:1.1em/1 UbuntuBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; text-transform: uppercase; color:#4e3487 ;}
+/* MEDIA TWEAK */ @media only screen and (max-width:1300px) { .psnc-home-intro ul li {font-size:0.8em; padding: 5px 0 7px 0;} }
+.psnc-home-intro b a:hover {text-decoration: underline;}
+.home-page.slideshow {height: 260px; position: relative; overflow: hidden; border:1px solid #ccc;}
+.home-page.slideshow .slideshow-mask {width: 55px; height: 260px; position: absolute; top:0; right:40%; z-index: 500; background: url(img/slideshow-mask.png) no-repeat center top; }
+.home-page.slideshow .slideshow-item {width: 100%;}
+.home-page.slideshow .slideshow-image {overflow: hidden; height: 260px; width: 60%; float: left;}
+.home-page.slideshow .slideshow-text {height: 260px; width: 40%; padding:10px 20px; background:#f3f3f3; overflow: hidden;  float: left; font:1.4em/1.2 UbuntuLight, 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+/* MEDIA TWEAK */ @media only screen and (max-width:1300px) { .home-page.slideshow .slideshow-text {font-size:1.2em;} }
+.home-page.slideshow .slideshow-text a {text-decoration: underline;}
+.home-page.slideshow .slideshow-text h2 {display: none;}
+.home-page.slideshow .slideshow-text strong, .home-page.slideshow .slideshow-text b {font-family:UbuntuBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;  font-weight: normal;}
+.home-page.slideshow img {width: auto; height: 260px; max-width: none;}
+nav.slideshow-nav {float:right; overflow: hidden; position: relative; bottom:-1px; right:0; z-index: 100;}
+nav.slideshow-nav .bx-pager-item {float:left;}
+nav.slideshow-nav a.bx-pager-link { background: #d8d8d8; color: white; text-decoration: none; margin: 0; padding: 5px 9px; display: block; border:1px solid #d8d8d8; border-bottom:1px solid #ccc;}
+nav.slideshow-nav a.bx-pager-link.active { background: #f3f3f3; color: #666;border:1px solid #ccc; border-bottom:1px solid #f3f3f3; }
+nav.slideshow-nav a:focus { outline: none; }
+
+.home-news-releases-title {margin-top:20px;}
+.home-news-releases-title h2 {float: left; margin-top:0; margin-bottom:0.5em;}
+.home-news-releases-title h2 a {color:#c3147b; text-transform:uppercase; margin:0.83em 0 0 0}
+.home-news-releases-title h2 a:hover {text-decoration: underline;}
+p.view-more {float: right; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 0.9em; text-transform:none; padding: 0; margin: 0;  }
+p.view-more a {color:#c3147b;}
+.home-news-releases {padding:0 5%; max-height: 500px; overflow: hidden; margin-bottom: 30px;}
+.news-box {border-right: 1px dotted #ccc;padding-right: 10px;min-height: 300px;}
+.news-box .news-thumb {width: 100%; overflow: hidden; border: 1px solid #ccc; position: relative;}
+.news-box .news-thumb img {border:1px solid #ccc; /*min-width: 268px;*/ min-height: 115px; max-height: 115px; border: 0; margin:0;}
+.posted-in {font-size: .8em; float:left;}
+.posted-in a {color:#444; text-decoration: underline; font-size: 1em;}
+.posted-in a:hover {text-decoration: none;}
+ul.posted-in {list-style-type: none; float:left; margin:0; padding:0; width: 50%;}
+ul.posted-in li {float:left; margin:0; padding:0; padding-left:10px;}
+
+.home-resources h2 {color:#4e3487; text-transform:uppercase;}
+.home-resources h3 {margin: 1em 0 0 0;}
+.home-events h2 a {color:#93378a; text-transform:uppercase;}
+.home-events h2 a:hover {text-decoration: underline;}
+.home-news-releases a {color: #d363a5;}
+.home-resources h3 a {color: #4e3487;}
+.home-events h3 {margin-bottom: 0;}
+.home-events h3 a {color: #93378a;}
+.home-events p, .home-resources p {margin: .5em 0 0 0;}
+.home-news-releases h3 a:hover, .home-events h3 a:hover, .home-resources h3 a:hover {color: #c3147b;}
+.home-resources article, .home-events article {padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid #ccc;}
+
+/* Default page */
+.sidebar-nav {margin-top:20px;}
+.sidebar-nav ul {width: 100%; padding: 0; margin:0; font:1em/1.2 UbuntuRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.sidebar-nav ul li, .sidebar-nav ul li ul, .sidebar-nav ul li ul li ul {font-size: 1em;}
+.sidebar-nav li {padding:0; margin: 0; float: left; clear: left; display: block; width: 100%;}
+.sidebar-nav li a {padding:5px 10px; margin: 0; border-bottom:1px solid #ccc;display: block; width: 100%; }
+.sidebar-nav li a:before { content: '\25b8'; float: left; font-family: psncicons; padding-right: 5px; color: #ccc;}
+.sidebar-nav li.current_page_item a:before { content: '\25be';}
+.sidebar-nav a:hover, .parent-page, .current_page_item > a, .current-cat > a {background: whitesmoke;}
+.sidebar-nav li a.back-home {background: #4e3487; color: white; border-top:1px solid #ccc;}
+.sidebar-nav li a:hover.back-home {background: whitesmoke; color: #444; }
+.sidebar-nav ul li li a {padding-left:30px; }
+.sidebar-nav ul li li li a {padding-left:60px; }
+.sidebar-nav ul li li li a:before { content: ''; }
+.sidebar-nav li.current_page_item li a:before { content: '';}
+.sidebar-nav .children { display: none; }
+.sidebar-nav .current_page_item .children, .sidebar-nav .current_page_ancestor .children, .sidebar-nav .current_page_parent .children { display: block; }
+
+/* Second level page */
+.l2-table {box-sizing: border-box; width: 100%; margin: 0; table-layout:fixed; overflow:hidden; white-space: nowrap; border-collapse: collapse; border: 0; }
+.l2-table a {font-family: UbuntuBold; text-decoration: none; width: 100%; height: 110px; color: white;  }
+.page-id-33 .l2-table td.block a {color: #aa890a;}
+.l2-table td {border-bottom:10px solid white; border-right:10px solid white; height: 110px; max-height:110px; overflow: hidden; text-align: center; vertical-align: middle; background: whitesmoke; padding: 0;}
+.l2-table td div {width: 100%; height:110px;}
+.l2-table td.block {background: black; padding:10px; }
+.page-id-41 .l2-table td.block {background: #93378a;} .page-id-33 .l2-table td.block {background: #f2e634;} .page-id-34 .l2-table td.block {background: #65922e;} .page-id-35 .l2-table td.block {background: #519680;} .page-id-36 .l2-table td.block {background: #5185c0;} .page-id-37 .l2-table td.block {background: #d58721;} .page-id-2489 .l2-table td.block {background: #C31378;}
+.l2-table td.square {width:16.65% ;max-width:16.65% ;}
+.l2-table td.rectangle {width:33.3% ; max-width:33.3% ;}
+.l2-table td img {min-width: 100% !important; padding:0 !important; margin:0 !important; min-height: 100% !important;}
+.trigger {cursor: pointer;}
+p.trigger {font-weight: bold; text-align: justify; padding-right: 30px;}
+.trigger {background: url(img/closed.png) no-repeat right center;}
+.trigger.active {background: url(img/open.png) no-repeat right center;}
+.trigger:hover {color: #4f3388;}
+.toggle_container {padding-bottom:10px; text-align: justify;}
+.toggle_container p {min-height: 0 !important;}
+
+/* Banner ads */
+.banner-ad.page {float: right; clear: right; overflow: hidden;}
+.banner-ad.home {float: left; clear: left; margin-top: 20px; margin-left:0; width: 235px ; height: 60px ; overflow: hidden;}
+.banner-ad p, .banner-ad a img.alignnone {margin:0; margin-top: 10px; margin-left:10px;  padding:0;}
+
+/* News footers */
+.page-news-releases {overflow: hidden; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid #ccc;}
+.page-news-releases h2 {text-transform: uppercase; float: left; margin-top:0; margin-bottom:0.5em;}
+.psnc-news h2, .psnc-news p.view-more a, .psnc-news h3 a {color:#93378a ;}
+/* .pcf-news h2, .pcf-news h2 p.view-more a, .pcf-news h3 a {color:#aa890a ;}*/
+.cit-news h2, .cit-news p.view-more a, .cit-news h3 a {color:#aa890a ;}
+.ds-news h2, .ds-news p.view-more a, .ds-news h3 a {color:#65922e ;}
+.sc-news h2, .sc-news p.view-more a, .sc-news h3 a {color: #519680;}
+.hl-news h2, .hl-news p.view-more a, .hl-news h3 a {color:#5185c0 ;}
+.lpc-news h2, .lpc-news p.view-more a, .lpc-news h3 a {color:#d58721 ;}
+.fs-news h2, .fs-news p.view-more a, .fs-news h3 a {color:#c3137b ;}
+
+/* News page */
+
+.news-template-box {width: 30%; float:left; border-right: 1px dotted #ccc; padding-right:10px; margin-right:3%; margin-bottom:10px;}
+.news-template-box .news-thumb {width: 100%; verflow: hidden; border: 1px solid #ccc; position: relative;}
+.news-template-box .news-thumb img {border:1px solid #ccc; width: 100%; border: 0; margin:0;}
+.news-template-box h3 {clear: both; margin: 0.5em 0 0.3em 0;}
+.news-template-box a {text-decoration: none;}
+.news-template-box a:hover {text-decoration: underline;}
+
+/* Events page */
+
+.past-events-title {cursor: pointer;}
+.past-events article {padding-bottom: 10px; border-bottom: 1px solid #ccc;}
+.past-events h3 {margin:1em 0 0 0;}
+.past-events p {margin:0.5em 0 0 0;}
+
+/* Search page */
+
+.search-input.filter {width:100%; float:none; background: #c59ec6; border: 1px solid #4e3487; box-sizing: border-box;}
+.purple-btn {padding: 10px; color: white; background: #4e3487; border: 1px solid #c59ec6; margin: 10px 0 0 0; width: 100%; font-family: UbuntuBold; text-transform: uppercase;}
+.search-page .post-type {float:left;}
+.search-page h2 {margin:0.7em 0 0 0; } 
+.search-page p {margin:0 0 0 93px; clear:none; } 
+.search-page article {border-bottom:1px solid #ccc; padding-bottom:10px; min-height: 70px;}
+
+
+/* Services Database */
+
+select#location-of-service, select#type-of-service, select#method-of-commissioning, select#funding-source {width: 100%; max-width: 100%;}
+.filter label {width: 100%;}
+
+.services-database table {font-size: .9em; margin-left:0; width: 100%;}
+.services-database table th {background: #519680; border-top: 0; color:white;}
+.search-input.services {width:100%; float:none; background: #519680; border: 1px solid #4e3487; box-sizing: border-box;}
+.green-btn {padding: 10px; color: white; background: #519680; margin: 10px 0 0 0; width: 100%; font-family: UbuntuBold; text-transform: uppercase; border:0;}
+
+
+.single-service .private {color: #93378a;}
+.single-service h3 {margin: 1em 0 .3em 0; color: #519680;}
+.single-service p {margin:.5em 0 1em 0; min-height: 0;}
+.single-service a[title=PDF]:before {font-family:psncicons; padding:5px 5px 5px 10px; content: '\e803';}
+.single-service a[title=DOC]:before {font-family:psncicons; padding:5px 5px 5px 10px; content: '\e803';}
+.single-service a[title=PPT]:before {font-family:psncicons; padding:5px 5px 5px 10px; content: '\e803';}
+.single-service a[title=PDF]:after {font-family:psncicons; padding:5px 5px 5px 1px; content: '(PDF)';}
+.single-service a[title=DOC]:after {font-family:psncicons; padding:5px 5px 5	px 1px; content: '(DOC)';}
+.single-service a[title=PPT]:after {font-family:psncicons; padding:5px 5px 5px 1px; content: '(PPT)';}
+.single-service .documents {overflow: visible; float:left; clear: left; display: block; width: 100%; min-height: 50px; margin-bottom: 20px;}
+.single-service .documents a {padding:10px; margin:0 10px 10px 0; background: #e3f1ed; color: #519680; text-decoration: none; border: 1px solid #519680; float:left;}
+.single-service .documents a:hover {background:#519680 ; color: white;}
+
+a#reset {text-decoration: underline;}
+
+#services_tbl_length {float:right;}
+#services_tbl_info {float:left;}
+#services_tbl_paginate {float:right;}
+#services_tbl_paginate a {margin:0 5px; cursor: pointer;}
+#services_tbl_paginate a.paginate_button {height: 2em; line-height: 2em; background: #519680; color: white; text-decoration: none; padding:5px;}
+#services_tbl_paginate a.paginate_button:hover {opacity: .8;}
+.paginate_button_disabled, #services_tbl_paginate a.paginate_button_disabled:hover {opacity: .2; cursor: text;}
+
+button.green.button {font-family: UbuntuBold; line-height: 2em; background: #519680; color: white; text-decoration: none; border:0;}
+
+
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+
+h1 { font: 1.8em/1 UbuntuBold; min-height: 1em }
+h2 { font: 1.5em/1 UbuntuBold; min-height: 1em }
+h3,h4, h5, h6 { font: 1.2em/1 UbuntuBold; min-height: 1em; margin: 1em 0; }
+p {font-size: .9em; min-height: 1em}
+strong, b {font-weight: normal;}
+p strong, p b, li strong, li b, td strong, td b {font-weight: bold;}
+.page-content td {font-size: .9em;}
+.page-content td p {font-size: 1em; /* min-height: 0; */}
+/* .page-content td p:first-child {margin: 0;}*/
+
+/*------------------------------------*\
+	COLOURS
+\*------------------------------------*/
+
+/*
+Main colour (Dark Purple) #4e3487
+PSNC's Work (Purple) #93378a
+Funding & Statistics (Pink) #c3137b
+Contract & IT (Yellow) #f2e634 -- Text #aa890a
+Dispensing and Supply (Green) #65922e
+Services and Commissioning (Petrol) #519680
+The Healthcare Landscape (Blue) #5185c0
+LPCs (Orange) #d58721
+*/
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+.mobileelement {display: none;}
+
+@media only screen and (max-width:1200px) {
+.menu-psncs-work a, .menu-news a, .menu-funding-and-statistics a, .menu-pharmacy-contract-and-funding a, .menu-dispensing-and-supply a, .menu-services-and-commissioning a, .menu-the-healthcare-landscape a, .menu-lpcs a {font-size: 0.9em;}
+}
+/* Menu vertical align hacks */
+@media only screen and (max-width:1215px) {
+.menu-pharmacy-contract-and-funding a {padding-top: 12px;}
+}
+@media only screen and (max-width:1000px) {
+.menu-the-healthcare-landscape a {padding-top: 12px;}
+}
+
+@media only screen and (max-width:480px) {
+
+	/* Global */
+	
+	.wrapper {min-width: 0;}
+	
+	.mobileelement {display: block;}
+	.hideformobile {display: none;}
+	
+	.eleven.columns {width: 100%;}
+	
+	.show-hide a {display: block; width: 100%;}
+	.show-hide a:before {font-family: psncicons; float: left; content: '\25be'; padding-right: 10px;}
+	.show-hide a.open:before {font-family: psncicons; float: left; content: '\25b4'; padding-right: 10px;}
+	
+	/* Header */
+	.logo.three.columns {width: 30%;}
+	.site-title.three.columns {width: 70%; padding-top: 20px;}
+	.pharmacy-logo.four.columns {display: none;}
+	.utility.six.columns {width: 100%; margin-left: 0; margin-bottom: 20px;}
+	.share-login {display: none;}
+	.quick-links, form.search {width: 100%;}
+	.quick-links {display: none;}
+	form.search {margin-top:10px;}
+
+	/* Nav */
+	.show-hide.main-menu a {width: 100%; background: #4e3487; color: white; border: 1px solid #ccc; margin-bottom: 10px; font-family: UbuntuBold; text-transform: uppercase; padding: 10px;  }
+	nav.main-nav {background: none;}
+	
+	nav.main-nav, nav.main-nav ul li, nav.main-nav, nav.main-nav ul li a {width:100%; height: 35px; border-radius: 0; padding: 3px; margin-bottom: 5px;} 
+	nav.main-nav, nav.main-nav ul.root-menu {height:auto}
+	nav.main-nav ul li ul.child-menu {}
+	nav.main-nav.mobileelement {clear:left;}
+	 
+	 /*Dropdown*/
+	nav.main-nav ul.child-menu {position: static; min-height: 0;}
+	nav.main-nav ul li ul.child-menu li, nav.main-nav ul li ul.child-menu li ul.child-menu {display: none !important;}
+	
+	/* Footer */
+	footer .four.columns {width: 100%;}
+	
+	/* Home */
+	.psnc-home-intro.five.columns {width: 100%;}
+	nav.slideshow-nav {margin-top:10px; margin-right:5px;}
+	.home-page.slideshow .slideshow-image {width: 100%;}
+	.home-page.slideshow img {width: 100%; height:auto; min-height: 260px;}
+	.home-page.slideshow .slideshow-text {position: absolute;bottom: 0;left: 0;height: 50%;opacity: .9; font-size:1em; width: 100%;}
+	.slideshow-mask {display: none;}
+	
+	/* Second level */
+	
+	table.l2-table, .l2-table thead, .l2-table tbody, .l2-table th, .l2-table td, .l2-table tr {	 display: block;	}
+	.l2-table td.square, .l2-table td.rectangle {width: 100%; max-width: none;}
+	.l2-table td {border-right:0;}
+	.l2-table td.block {max-height: none; height: auto; overflow: visible;}
+
+	
+	/* Page */
+	.sidebar-nav.four.columns {width: 100%; padding:0;}
+	.sidebar-nav li.hideformobile {display: none;}
+	.sidebar-nav li.toggle {margin:0; padding:0;}
+	.show-hide.sidebar a {margin: 0; padding:10px; border: 1px solid #4e3487; background: whitesmoke;}
+	.page-content.twelve.columns {width: 100%;}
+	.page-news-releases h2 {float: left;}
+	a.view-more {float:left; margin-bottom: 10px;}
+	a.view-more:before {content:' '; display: table; clear: left;}
+	
+	.news-template-box {width: 100%; border:0; padding:0; border-bottom: 1px dotted #ccc; padding-bottom: 10px; margin-right:0 ;}
+	
+	/* Sliders */
+	.bx-wrapper .bx-controls-direction a { /* top:20% !important; padding:5px; background-color: white; */ display:none;}
+	.bx-wrapper .bx-prev {left:0 !important;}
+	.bx-wrapper .bx-next {right:0 !important;}
+	.news-box {border:0; padding:0;}
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}
+
+@font-face {
+    font-family: 'UbuntuRegular';
+    src: url('fonts/Ubuntu-R-webfont.eot');
+    src: url('fonts/Ubuntu-R-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Ubuntu-R-webfont.woff') format('woff'),
+         url('fonts/Ubuntu-R-webfont.ttf') format('truetype'),
+         url('fonts/Ubuntu-R-webfont.svg#UbuntuRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'UbuntuItalic';
+    src: url('fonts/Ubuntu-RI-webfont.eot');
+    src: url('fonts/Ubuntu-RI-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Ubuntu-RI-webfont.woff') format('woff'),
+         url('fonts/Ubuntu-RI-webfont.ttf') format('truetype'),
+         url('fonts/Ubuntu-RI-webfont.svg#UbuntuItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'UbuntuBold';
+    src: url('fonts/Ubuntu-B-webfont.eot');
+    src: url('fonts/Ubuntu-B-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Ubuntu-B-webfont.woff') format('woff'),
+         url('fonts/Ubuntu-B-webfont.ttf') format('truetype'),
+         url('fonts/Ubuntu-B-webfont.svg#UbuntuBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'UbuntuBoldItalic';
+    src: url('fonts/Ubuntu-BI-webfont.eot');
+    src: url('fonts/Ubuntu-BI-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Ubuntu-BI-webfont.woff') format('woff'),
+         url('fonts/Ubuntu-BI-webfont.ttf') format('truetype'),
+         url('fonts/Ubuntu-BI-webfont.svg#UbuntuBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'UbuntuLight';
+    src: url('fonts/Ubuntu-L-webfont.eot');
+    src: url('fonts/Ubuntu-L-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Ubuntu-L-webfont.woff') format('woff'),
+         url('fonts/Ubuntu-L-webfont.ttf') format('truetype'),
+         url('fonts/Ubuntu-L-webfont.svg#UbuntuLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'UbuntuLightItalic';
+    src: url('fonts/Ubuntu-LI-webfont.eot');
+    src: url('fonts/Ubuntu-LI-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Ubuntu-LI-webfont.woff') format('woff'),
+         url('fonts/Ubuntu-LI-webfont.ttf') format('truetype'),
+         url('fonts/Ubuntu-LI-webfont.svg#UbuntuLightItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'UbuntuMedium';
+    src: url('fonts/Ubuntu-M-webfont.eot');
+    src: url('fonts/Ubuntu-M-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Ubuntu-M-webfont.woff') format('woff'),
+         url('fonts/Ubuntu-M-webfont.ttf') format('truetype'),
+         url('fonts/Ubuntu-M-webfont.svg#UbuntuMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'UbuntuMediumItalic';
+    src: url('fonts/Ubuntu-MI-webfont.eot');
+    src: url('fonts/Ubuntu-MI-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Ubuntu-MI-webfont.woff') format('woff'),
+         url('fonts/Ubuntu-MI-webfont.ttf') format('truetype'),
+         url('fonts/Ubuntu-MI-webfont.svg#UbuntuMediumItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'UbuntuCondensedRegular';
+    src: url('fonts/Ubuntu-C-webfont.eot');
+    src: url('fonts/Ubuntu-C-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Ubuntu-C-webfont.woff') format('woff'),
+         url('fonts/Ubuntu-C-webfont.ttf') format('truetype'),
+         url('fonts/Ubuntu-C-webfont.svg#UbuntuCondensedRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@charset "UTF-8";
+
+ @font-face {
+  font-family: 'psncicons';
+  src: url('fonts/psncicons.eot?37044825');
+  src: url('fonts/psncicons.eot?37044825#iefix') format('embedded-opentype'),
+       url('fonts/psncicons.woff?37044825') format('woff'),
+       url('fonts/psncicons.ttf?37044825') format('truetype'),
+       url('fonts/psncicons.svg?37044825#psncicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'psncicons';
+    src: url('../font/psncicons.svg?37044825#psncicons') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "psncicons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - magrins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+}
+ 
+.icon-up-dir:before { content: '\25b4'; } /* '▴' */
+.icon-right-dir:before { content: '\25b8'; } /* '▸' */
+.icon-down-dir:before { content: '\25be'; } /* '▾' */
+.icon-star:before { content: '\e800'; } /* '' */
+.icon-pencil:before { content: '\270e'; } /* '✎' */
+.icon-reply:before { content: '\e802'; } /* '' */
+.icon-retweet:before { content: '\e801'; } /* '' */
+.icon-download:before { content: '\e803'; } /* '' */
+.icon-search:before { content: '🔍'; } /* '\1f50d' */
+
+
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+   
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+   
+.alignnone {
+	margin:5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+	clear:right;
+}
+.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+	clear: right;
+}
+.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+a img.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+a img.alignnone {
+	margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+	background:#FFF;
+	border:1px solid #F0F0F0;
+	max-width:96%;
+	padding:5px 3px 10px;
+	text-align:center;
+}
+.wp-caption.alignnone {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin:5px 0 20px 20px;
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:0 4px 5px;
+}
+.sticky {
+	
+}
+.bypostauthor {
+	
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}
+
+/*------------------------------------*\
+    IE8 - at the bottom, where they belong
+\*------------------------------------*/
+
+
+
+.ie8 button.search-submit {background:url(img/search.png) center center no-repeat white; }
+
+/*------------------------------------*\
+    IE7 - at the bottom, where they belong
+\*------------------------------------*/
+
+
+.ie7 .wrapper {	width:960px;}
+
+.ie7 .one.column {width: 40px;} .ie7 .two.columns {width: 100px;} .ie7 .three.columns {width: 160px;} .ie7 .four.columns {width: 220px;} .ie7 .five.columns {width: 280px;} .ie7 .six.columns {width: 340px;} .ie7 .seven.columns {width: 400px;} .ie7 .eight.columns {width: 460px;} .ie7 .nine.columns {width: 520px;} .ie7 .ten.columns {width: 580px;} .ie7 .eleven.columns {width: 640px;} .ie7 .twelve.columns {width: 700px;} .ie7 .thirteen.columns {width: 760px;} .ie7 .fourteen.columns {width: 820px;} .ie7 .fifteen.columns {width: 880px;} .ie7 .sixteen.columns {width: 940px;} .ie7 .one-third.column {width: 300px;} .ie7 .two-thirds.column {width: 620px;}
+
+.ie7 .site-title {font:0.9em/1 UbuntuBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+
+.ie7 .quick-links-search a.dropdown {padding-left:10px; width: 120px;}
+.ie7 .quick-links ul, .ie7 .quick-links li {width: 160px;}
+.ie7 .quick-links li a {padding:5px; width: 150px;}
+
+.ie7 form.search {width: 200px;}
+.ie7 button.search-submit {position: absolute; right:-13px; bottom:-4px; background:url(img/search.png) center center no-repeat white; border: 1px solid #c59ec6; height:36px; width: 30px;}
+
+.ie7 nav.main-nav {width: 960px; margin:0 auto;}
+.ie7 nav.main-nav ul.root-menu {padding: 0;}
+
+.ie7 .menu-psncs-work, .ie7 .menu-funding-and-statistics, .ie7 .menu-pharmacy-contract-and-funding, .ie7 .menu-dispensing-and-supply, .ie7 .menu-services-and-commissioning, .ie7 .menu-the-healthcare-landscape, .ie7 .menu-lpcs /* .ie7 .menu-news,*/ {width: 128px; margin: 0 3px 0 0; height: 70px; padding:0;}
+
+.ie7 .menu-psncs-work a, .ie7 .menu-funding-and-statistics a, .ie7 .menu-pharmacy-contract-and-funding a, .ie7 .menu-dispensing-and-supply a, .ie7 .menu-services-and-commissioning a, .ie7 .menu-the-healthcare-landscape a, .ie7 .menu-lpcs a /* .ie7 .menu-news a, */{ width: 128px; padding:10px 0 0 0; line-height: 1.1; height: 60px;}
+
+.ie7 nav.main-nav ul.child-menu {padding: 10px; width: 940px; top:75px;} 
+
+.ie7 nav.main-nav ul li ul.child-menu li.featured-menu-item {display: none;}
+.ie7 nav.main-nav ul li ul.child-menu li {width: 215px; word-wrap:break-word; white-space: pre; display: block; }
+.ie7 nav.main-nav ul li ul.child-menu li:before { content: ''; display: none; }
+.ie7 nav.main-nav ul li ul.child-menu li a {width: 215px; }
+.ie7 nav.main-nav ul li ul.child-menu li ul.child-menu {width: 215px; margin:0; padding:0;}
+.ie7 nav.main-nav ul li ul.child-menu li ul.child-menu li {width: 215px; margin:0;  padding: 5px 0;}
+
+
+.ie7 .home-page.slideshow .slideshow-image {width: 340px}
+.ie7 .home-page.slideshow .slideshow-text {width: 260px;}
+.ie7 .home-page.slideshow .slideshow-mask {display: none;}
+
+.ie7 .sidebar-nav ul {width: 200px;}
+.ie7 .sidebar-nav li a {width: auto; }
+
+.ie7 .news-template-box {width: 200px;}
+.ie7 .news-template-box .news-thumb {width: 200px;}
+.ie7 .news-template-box .news-thumb img {width: 200px;}
+
+.ie7 hr {border: 0; background: white; margin:0; padding:0; height: 0;}
+
+/*------------------------------------*\
+    Experimental styles
+\*------------------------------------*/
+
+
+
+
+

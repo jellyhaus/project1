@@ -1,0 +1,31 @@
+
+nav.main-nav ul li.menu-psncs-work a {background: #93378a; }
+nav.main-nav ul li.menu-news a {background: #c3137b;}
+nav.main-nav ul li.menu-pharmacy-contract-and-funding a, nav.main-nav ul li.menu-item-3 a:hover {background: #f2e634;  color: #916e10;}
+nav.main-nav ul li.menu-dispensing-and-supply a {background: #65922e;}
+nav.main-nav ul li.menu-services-and-commissioning a {background: #519680;}
+nav.main-nav ul li.menu-the-healthcare-landscape a {background: #5185c0;}
+nav.main-nav ul li.menu-lpcs a {background: #d58721; }
+
+nav.main-nav ul li.menu-psncs-work ul.child-menu {background: #93378a;}
+nav.main-nav ul li.menu-news ul.child-menu {background: #c3137b;}
+nav.main-nav ul li.menu-pharmacy-contract-and-funding ul.child-menu {background: #f2e634;} nav.main-nav ul li.menu-pharmacy-contract-and-funding ul.child-menu li a, nav.main-nav ul li.menu-pharmacy-contract-and-funding ul.child-menu li.featured-menu-item p {color: #916e10 !important;}
+nav.main-nav ul li.menu-dispensing-and-supply ul.child-menu {background: #65922e;}
+nav.main-nav ul li.menu-services-and-commissioning ul.child-menu {background: #519680;}
+nav.main-nav ul li.menu-the-healthcare-landscape ul.child-menu {background: #5185c0;}
+nav.main-nav ul li.menu-lpcs ul.child-menu {background: #d58721;}
+
+nav.main-nav ul li.menu-psncs-work ul.child-menu li.featured-menu-item {background: #93378a;}
+nav.main-nav ul li.menu-news ul.child-menu li.featured-menu-item {background: #c3137b;}
+nav.main-nav ul li.menu-pharmacy-contract-and-funding ul.child-menu li.featured-menu-item {background: #f2e634;} nav.main-nav ul li.menu-item-3 ul.child-menu a {color: #916e10;}
+nav.main-nav ul li.menu-dispensing-and-supply ul.child-menu li.featured-menu-item {background: #65922e;}
+nav.main-nav ul li.menu-services-and-commissioning ul.child-menu li.featured-menu-item {background: #519680;}
+nav.main-nav ul li.menu-the-healthcare-landscape ul.child-menu li.featured-menu-item {background: #5185c0;}
+nav.main-nav ul li.menu-lpcs ul.child-menu li.featured-menu-item {background: #d58721;}
+
+
+
+
+
+
+
